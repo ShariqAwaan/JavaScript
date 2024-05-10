@@ -57,17 +57,21 @@ let randomNum =randomNo.toString();
 console.log(randomNo);
 
 let userNo = document.getElementById("inputq1");
+let whenClick = document.getElementById("btn1");
 
 let guessNo =  userNo.value;
 
 console.log(userNo);
 console.log(guessNo);
-
+console.log(whenClick);
  function answer(){
-  if(randomNum == guessNo){
-    console.log ("You entered the same value " + randomNo + " Good Work");
-  }
-  else{
-    console.log ("Not Matched the correct answer is " + randomNum );
-  }
+  // if(randomNum == guessNo){
+  //   console.log ("You entered the same value " + randomNo + " Good Work");
+  // }
+  // else{
+  //   console.log ("Not Matched the correct answer is " + randomNum );
+  // }
+  console.log("hiii")
 }
+
+console.log(whenClick.onclick = answer())

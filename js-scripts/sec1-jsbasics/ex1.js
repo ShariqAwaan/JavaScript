@@ -116,12 +116,29 @@ var glink = "https://www.google.com";
 
 
 console.log("Exercise 1 ends Here");
-    
 
+var courses = [
+  {
+      'title': 'Learn code in Python 3',
+      'reviews': 6802,
+      'students': 130129,
+      'categories': ['programming', 'technology']
+  },
 
+  {
+      'title': 'Learn PHP -  Beginner to Advanced',
+      'reviews': 1204,
+      'students': 30521,
+      'categories': ['web development', 'programming']
+  },
 
+  {
+      'title': 'Learn Microsoft Excel 2020',
+      'reviews': 4209,
+      'students': 18560,
+      'categories': ['productivity', 'business']
+  }
+  
+];
 
-
-
-
-
+console.log( courses[1].categories );

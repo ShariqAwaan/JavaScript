@@ -21,7 +21,10 @@ console.log("Q2");
 
 var classification = [ "John Hill" , "Mary Jane", "Gary Vee", "Paricia Mills", "Helen Hall", "Paul Green" ];
 
-console.log("The Top 3 Students are: " +classification.slice(3, 6));
+console.log("The Best Student is: " + classification[5]);
+console.log("The 2nd Best Student is: " + classification[4]);
+console.log("The 3rd Best Student is: " + classification[3]);
+
 
 //Q3
 console.log("Q3");

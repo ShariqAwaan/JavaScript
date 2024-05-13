@@ -76,42 +76,36 @@ console.log("The sum of the given no. is " + sum + " and the product is " + prod
 let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
 let o = ["th","st","nd","rd"];
 
-
-
-function userChoice(colour){
-  let choice =0;
-  
-  if(choice == color[0]){
-  
-    console.log("1" + o[1] + " choice is " + color[0] );
-    
-  }
-  else if(choice == color[1]){
-    
-    console.log("2" + o[2] + " choice is " + color[1] );
-    
-  }
-  else if(choice == color[2]){
-    
-    console.log("3" + o[3] + " choice is " + color[2] );
-  }
-  else if(choice > color[2] && choice < color.length){
-    console.log("4" + o[0] + " choice is " + color[3]);
-  }
-  // else if(choice == color[0] && choice < color.length){
-  //   console.log(o + color)
-  // }
-  else{
-    console.log("Invalid Choice")
-  }
-
-  let color2 =0
-for (let i=0 ; i<color[7] ; i++){
-  color2 = i + 1;
+// 1st 2nd 3rd
+function getOrdinal(n) {
+    let ordinal = n % 100;
+    console.log(ordinal)
+    const ordinalNum = ordinal +( (o[(ordinal - 20) % 10]) || o[ordinal] || o[0])
+    return ordinalNum
 }
-console.log("The colors are as follow : " + color[colour])
+
+
+console.log(getOrdinal(21));
+
+// 1st 2nd 3rd
+function getOrdinal(n) {
+  let ordinal = n % 100;
+  let ordinalNum = ordinal + ( (o[(ordinal - 20) % 10] || o[ordinal] || o[0]));
+  return ordinalNum;
 }
-console.log(userChoice(color))
+
+console.log(getOrdinal(21));
+
+
+// for (let i = 0; i < color.length; i++) {
+  
+//   const ordinalNumbers = getOrdinal(i + 1)
+//    const result = ordinalNumbers + " choice is " + color[i]
+//    console.log(result);
+  
+// }
+
+
 
 
 //Q7

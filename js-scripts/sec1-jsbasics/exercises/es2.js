@@ -27,9 +27,9 @@
 
 
 
-let userNo = document.getElementById("inputq1");
-let whenClick = document.getElementById("btnq1");
-let ansDq1 = document.getElementById("pq1");
+let inputQ1 = document.getElementById("inputq1");
+let btnQ1 = document.getElementById("btnq1");
+let answerQ1 = document.getElementById("pq1");
 
 
 function rndmNo(){
@@ -37,14 +37,14 @@ function rndmNo(){
   return randomNo.toString()
 }
 
-function answer(){
-  let userValue = userNo.value;
+function solutionQ1(){
+  let inpQ1 = inputQ1.value;
   let randNo = rndmNo();
 
-  if (userValue == randNo){
-    return ("Good Work you enterd the same value i.e. :" + userValue);
+  if (inpQ1 == randNo){
+    return ("Good Work you enterd the same value i.e. :" + inpQ1);
   }
-  else if(userValue == 0){
+  else if(inpQ1 == 0){
     return ("Please select any no. first between 1-10")
   }
   else{
@@ -52,29 +52,29 @@ function answer(){
   }
 }
 
-whenClick.onclick = function (){
-  let ansQ1 = answer();
-  ansDq1.style.display = "block";
-  ansDq1.style.color = "rgb(113, 19, 38)";
-  ansDq1.style.fontSize = "20px"
-  ansDq1.innerHTML = ansQ1;
+btnQ1.onclick = function (){
+  let solQ1 = solutionQ1();
+  answerQ1.style.display = "block";
+  answerQ1.style.color = "rgb(113, 19, 38)";
+  answerQ1.style.fontSize = "20px"
+  answerQ1.innerHTML = solQ1;
 }
 
 
 
 //Q2
 // Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
-let iq2_1 = document.getElementById("inputq2-1");
-let iq2_2 = document.getElementById("inputq2-2");
+let inputQ2_1 = document.getElementById("inputq2-1");
+let inputQ2_2 = document.getElementById("inputq2-2");
 let mplyBtn = document.getElementById("btnq2-1");
 let dvdBtn = document.getElementById("btnq2-2");
-let ansDisplay1 = document.getElementById("pq2-1");
-let ansDisplay2 = document.getElementById("pq2-2");
+let answerQ2_1 = document.getElementById("pq2-1");
+let answerQ2_2 = document.getElementById("pq2-2");
 //let inputq2_1 = iq2_1.value;
 //let inputq2_2 = iq2_2.value;
 function multiplication(){
-  let inputq2_1 = iq2_1.value;
-  let inputq2_2 = iq2_2.value;
+  let inputq2_1 = inputQ2_1.value;
+  let inputq2_2 = inputQ2_2.value;
 
   let ansMply = inputq2_1 * inputq2_2;
 
@@ -83,16 +83,16 @@ function multiplication(){
 
 mplyBtn.onclick = function(){
   let mp1 = multiplication();
-  ansDisplay1.style.display = "block";
-  ansDisplay1.style.color = "rgb(113, 19, 38)";
-  ansDisplay1.style.fontSize = "20px";
-  ansDisplay1.innerHTML = mp1;
+  answerQ2_1.style.display = "block";
+  answerQ2_1.style.color = "rgb(113, 19, 38)";
+  answerQ2_1.style.fontSize = "20px";
+  answerQ2_1.innerHTML = mp1;
 };
 
 
 function division(){
-  let inputq2_1 = iq2_1.value;
-  let inputq2_2 = iq2_2.value;
+  let inputq2_1 = inputQ2_1.value;
+  let inputq2_2 = inputQ2_2.value;
 
   ansDvd = inputq2_1 / inputq2_2;
 
@@ -101,21 +101,21 @@ function division(){
 
 dvdBtn.onclick = function (){
   let dvd1 = division();
-  ansDisplay2.style.display = "block";
-  ansDisplay2.style.color = "rgb(113, 19, 38)";
-  ansDisplay2.style.fontSize = "20px";
-  ansDisplay2.innerHTML = dvd1;
+  answerQ2_2.style.display = "block";
+  answerQ2_2.style.color = "rgb(113, 19, 38)";
+  answerQ2_2.style.fontSize = "20px";
+  answerQ2_2.innerHTML = dvd1;
 };
 
 //Q3
 // Write a JavaScript program to create another string by adding "Py" in front of a given string. If the given string begins with "Py" return the original string. 
 
-let iq3 = document.getElementById("inputq3");
-let btnq3 = document.getElementById("btnq3");
-let ansDq3 = document.getElementById("pq3");
+let inputQ3 = document.getElementById("inputq3");
+let btnQ3 = document.getElementById("btnq3");
+let answerQ3 = document.getElementById("pq3");
 
-function newString(){
-  let inpQ3 = iq3.value;
+function solutionQ3(){
+  let inpQ3 = inputQ3.value;
   if (inpQ3[0] == "P" && inpQ3[1] == "y"){
     return inpQ3;
   }
@@ -129,31 +129,32 @@ function newString(){
   }
 }
 
-btnq3.onclick = function(){
-  let modifiedString = newString();
-  ansDq3.style.display = "block";
-  ansDq3.style.color = "rgb(113, 19, 38)";
-  ansDq3.style.font = "20px"
-  ansDq3.innerHTML = modifiedString;
+btnQ3.onclick = function(){
+  let modifiedString = solutionQ3();
+  answerQ3.style.display = "block";
+  answerQ3.style.color = "rgb(113, 19, 38)";
+  answerQ3.style.font = "20px"
+  answerQ3.innerHTML = modifiedString;
 }
 
 //Q4
 // Remove a character at the specified position of a given string and return the new string
 
-let iq4_1 = document.getElementById("inputq4-1");
-let iq4_2 = document.getElementById("inputq4-2");
-let btnq4 = document.getElementById("btnq4");
+let inputQ4_1 = document.getElementById("inputq4-1");
+let inputQ4_2 = document.getElementById("inputq4-2");
+let btnQ4 = document.getElementById("btnq4");
 // let ansDq4_1 = document.getElementById("pq4-1");
-let answer4 = document.getElementById("pq4-1");
+let answerQ4 = document.getElementById("pq4-1");
 
 
 
-function givenString(str , charToRemove){
+function givenString(){
+  let inpQ4_1 = inputQ4_1.value;
+  let inpQ4_2 = inputQ4_2.value;
  
-  // let iq4__1 = iq4_1.value;
-  let itr = str.indexOf(charToRemove);
-  console.log (itr);
-  let newString = str.replace(str[itr] , "");
+  let indexToRemove = inpQ4_1.indexOf(inpQ4_2);
+  
+  let newString = inpQ4_1.replace(inpQ4_1[indexToRemove] , "");
   
 
   return newString;
@@ -163,14 +164,14 @@ function givenString(str , charToRemove){
 }
 // console.log(givenString("any" , "n"));
 
-btnq4.onclick = function(){
-  let value1 = iq4_1.value;
-  let value2 = iq4_2.value;
-  let iq4__1 = givenString( value1 , value2);
-  answer4.style.display = "block";
-  answer4.style.color = "rgb(113, 19, 38)";
-  answer4.style.fontSize = "20px";
-  answer4.innerHTML = iq4__1;
+btnQ4.onclick = function(){
+  // let value1 = iq4_1.value;
+  // let value2 = iq4_2.value;
+  let solutionQ4 = givenString();
+  answerQ4.style.display = "block";
+  answerQ4.style.color = "rgb(113, 19, 38)";
+  answerQ4.style.fontSize = "20px";
+  answerQ4.innerHTML = solutionQ4;
   
 }
 
@@ -181,12 +182,12 @@ btnq4.onclick = function(){
 //Q5
 // Write a JavaScript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1. 
 
-let iq5 = document.getElementById("inputq5");
-let btnq5 = document.getElementById("btnq5");
-let ansDq5 = document.getElementById("pq5");
+let inputQ5 = document.getElementById("inputq5");
+let btnQ5 = document.getElementById("btnq5");
+let answerQ5 = document.getElementById("pq5");
 
-function positionChanging(){
-  let iq5_1 = iq5.value;
+function solutionQ5(){
+  let inpQ5 = inputQ5.value;
 
   // let char1 = iq5_1[0];
   // let char2 = iq5_1[iq5_1.length-1];
@@ -200,8 +201,8 @@ function positionChanging(){
   // console.log (char1);
   // console.log (char2);
 
-  if (iq5_1.length > 1) {
-  return iq5_1[iq5_1.length-1] + iq5_1.slice(1 , iq5_1.length-1) + iq5_1[0];
+  if (inpQ5.length > 1) {
+  return inpQ5[inpQ5.length-1] + inpQ5.slice(1 , inpQ5.length-1) + inpQ5[0];
   }
   else {
     return ("The character length must be greater than 1");
@@ -209,16 +210,16 @@ function positionChanging(){
   
 }
 
-btnq5.onclick = function (){
-  let posChng = positionChanging();
+btnQ5.onclick = function (){
+  let solQ5 = solutionQ5();
 
-  ansDq5.style.display = "block";
-  ansDq5.style.color = "rgb(113, 19, 38)";
-  ansDq5.style.fontSize = "20px";
-  ansDq5.innerHTML = posChng;
+  answerQ5.style.display = "block";
+  answerQ5.style.color = "rgb(113, 19, 38)";
+  answerQ5.style.fontSize = "20px";
+  answerQ5.innerHTML = solQ5;
 }
 
-//&& iq5_1.replace(iq5_1[iq5_1.length -1 ] , iq5_1[0])
+
 
 
 //Q6
@@ -259,7 +260,7 @@ function solutionQ7(){
 
     return ("Please add a positive integer greater than 0")
   }
-  else if (inpQ7 % 3 == 0 && inpQ7.value % 7 == 0){
+  else if (inpQ7 % 3 == 0 && inpQ7 % 7 == 0){
 
     return ("The given no. is multiple of both 3 and 7");
   }
@@ -370,13 +371,22 @@ function findingGrades(){
   let inpQ10_1 = parseInt(inputQ10_1.value);
   let inpQ10_2 = inputQ10_2.value;
 
-  if (inpQ10_1 < 90 && inpQ10_2 == "Yes"){
+  if (inpQ10_1 < 90 && inpQ10_2 == "Yes" ){
+    return ("Your grade is not A+");
+  }
+  else if (inpQ10_1 < 90 && inpQ10_2 == "yes" ){
     return ("Your grade is not A+");
   }
   else if (inpQ10_1 >+ 90 && inpQ10_2 == "Yes"){
     return ("Your grade is A+ and True");
   }
+  else if (inpQ10_1 >+ 90 && inpQ10_2 == "yes"){
+    return ("Your grade is A+ and True");
+  }
   else if (inpQ10_1 >= 89 && inpQ10_2 == "No"){
+    return ("Your grade is A+ and False")
+  }
+  else if (inpQ10_1 >= 89 && inpQ10_2 == "no"){
     return ("Your grade is A+ and False")
   }
   else{
@@ -402,13 +412,12 @@ let inputQ11_2 = document.getElementById("inputq11-2");
 let btnQ11 = document.getElementById("btnq11");
 let answerQ11 = document.getElementById("pq11");
 
-function solutionQ11(){
-  let inpQ11_1 = parseInt(inputQ11_1.value);
-  let inpQ11_2 = parseInt(inputQ11_2.value);
-  console.log(inpQ11_1);
-  console.log(inpQ11_2);
+function solutionQ11(firstInput , secondInput){
+  
+  // console.log(inpQ11_1);
+  // console.log(inpQ11_2);
 
-  let sum = inpQ11_1 + inpQ11_2;
+  let sum = firstInput + secondInput;
   if (sum >=50 && sum <= 80){
     return ("65");
   }
@@ -421,7 +430,9 @@ function solutionQ11(){
 }
 
 btnQ11.onclick = function(){
-  let solQ11 = solutionQ11();
+  let inpQ11_1 = parseInt(inputQ11_1.value);
+  let inpQ11_2 = parseInt(inputQ11_2.value);
+  let solQ11 = solutionQ11(inpQ11_1 , inpQ11_2);
   answerQ11.style.display = "block";
   answerQ11.style.color = "rgb(113, 19, 38)";
   answerQ11.style.fontSize = "20px";

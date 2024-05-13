@@ -1,14 +1,12 @@
 
 
-// Write a JavaScript program that iterates integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers multiples of both three and five print "FizzBuzz".
 
-// Write a JavaScript program to find the Armstrong numbers of 3 digits.
-// Note : An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371.
 
-// Write a JavaScript program to sum 3 and 5 multiples under 1000.
 
-//  Calculate the sum of all the numbers in the following array
-// var numbersArray = [1,13,22,123,49]
+
+
+
+
 
 // Write a program that determines whether a given number is positive or negative.
 
@@ -34,16 +32,186 @@
 // "2 is even"
 
 
-let btnQ1 = document.getElementById("btnQ1");
-let answerQ1 = document.getElementById("pQ1");
+let btnQ1 = document.getElementById("btnq1");
+let answerQ1 = document.getElementById("pq1");
 
 
-function solutionQ1(){
+
   
-  for (let i=0 ; i<= 15 ; i++){
-    i++
+  function solutionQ1(){
+    for (let i=0 ; i<= 15 ; i++){
+      if (i % 2 == 0 ){
+        console.log (i + " is even");
+        
+      }
+      else {
+        console.log (i + " is odd");
+        
+      }
+      
+    }
+  }
+
+
+
+btnQ1.onclick = function(){
+  let solQ1 = solutionQ1();
+
+  answerQ1.style.display = "block";
+  answerQ1.style.color = "darkcyan";
+  answerQ1.style.fontSize = "15px";
+  answerQ1.innerHTML = solQ1;
+}
+
+
+//Q2
+// Write a JavaScript program that iterates integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers multiples of both three and five print "FizzBuzz".
+
+let btnQ2 = document.getElementById("btnq2-1");
+let answerQ2 = document.getElementById("pq2-1");
+
+function solutionQ2(){
+  for (let i=0 ; i<= 100 ; i++){
+    if (i % 3 == 0 && i % 5 == 0){
+      console.log ("FizzBuzz")
+    }
+    else if (i % 3 == 0 ){
+      console.log ("Fizz");
+      
+    }
+    else if(i % 5 == 0) {
+      console.log ("Buzz");
+      
+    }
+    else {
+      console.log (i)
+    }
+    
+    
   }
 }
+
+
+btnQ2.onclick = function(){
+  
+  let solQ2 = solutionQ2();
+
+  answerQ2.style.display = "block";
+  answerQ2.style.color = "darkcyan";
+  answerQ2.style.fontSize = "15px";
+  answerQ2.innerHTML = solQ2;
+}
+
+
+
+//Q3
+// Write a JavaScript program to find the Armstrong numbers of 3 digits.
+// Note : An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371.
+
+let inputQ3 = document.getElementById("inputq3");
+let btnQ3 = document.getElementById("btnq3")
+let answerQ3 = document.getElementById("pq3");
+
+function solutionQ3(){
+  let inpQ3 = inputQ3.value ;
+  let stringedinput = inpQ3.toString();
+  let firstNo = parseInt(stringedinput[0]);
+  let secondNo = parseInt(stringedinput[1]);
+  let thirdNo = parseInt(stringedinput[2]);
+
+  let cubeOfFirstNo = Math.pow(firstNo , 3);
+  let cubeOfSecondNo = Math.pow(secondNo , 3);
+  let cubeOfThirdNo = Math.pow(thirdNo , 3);
+
+  
+
+  let cubeOfAllNo = cubeOfFirstNo + cubeOfSecondNo + cubeOfThirdNo ;
+
+  
+   if (inpQ3 < 100 || inpQ3 > 1000){
+    console.log ("The No. must be 3 digits");
+   }
+   else if ( cubeOfAllNo == inpQ3 ){
+    console.log ("The no. is an ArmStrong No." , inpQ3);
+   }
+   else{
+    console.log ("The no. is not ArmStrong No." , inpQ3);
+   }
+}
+
+btnQ3.onclick = function(){
+  
+  let solQ3 = solutionQ3();
+
+  answerQ3.style.display = "block";
+  answerQ3.style.color = "darkcyan";
+  answerQ3.style.fontSize = "15px";
+  answerQ3.innerHTML = solQ3;
+}
+
+//Q4
+// Write a JavaScript program to sum 3 and 5 multiples under 1000.
+
+let btnQ4 = document.getElementById("btnq4");
+let answerQ4 = document.getElementById("pq4-1");
+
+function solutionQ4(){
+  let result = 0
+  for (let i=0 ; i<= 1000 ; i++){
+    
+    if (i % 3 == 0 || i % 5 == 0){
+      result += i
+    }
+   
+    }
+    console.log (result)
+    
+  }
+
+
+
+btnQ4.onclick = function(){
+  
+  let solQ4 = solutionQ4();
+
+  answerQ4.style.display = "block";
+  answerQ4.style.color = "darkcyan";
+  answerQ4.style.fontSize = "15px";
+  answerQ4.innerHTML = solQ4;
+}
+
+
+
+
+//Q5
+//  Calculate the sum of all the numbers in the following array
+// var numbersArray = [1,13,22,123,49]
+
+let btnQ5 = document.getElementById("btnq5");
+let answerQ5 = document.getElementById("pq5");
+
+function solutionQ5(){
+  let numbersArray = [1,13,22,123,49];
+  for (let i = 0 ; i < numbersArray.length ; i++){
+    numbersArray += i
+  }
+  // let answer = numbersArray[0] + numbersArray[1] + numbersArray[2] + numbersArray[3] + numbersArray[4];
+
+  console.log (numbersArray);
+}
+console.log(solutionQ5())
+
+btnQ5.onclick = function(){
+  
+  let solQ5 = solutionQ5();
+
+  answerQ5.style.display = "block";
+  answerQ5.style.color = "darkcyan";
+  answerQ5.style.fontSize = "15px";
+  answerQ5.innerHTML = solQ5;
+}
+
+
 
 
 

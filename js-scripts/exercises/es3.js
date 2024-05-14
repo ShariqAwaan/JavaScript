@@ -30,12 +30,15 @@ let answerQ1 = document.getElementById("pq1");
 
 
 btnQ1.onclick = function(){
-  let solQ1 = solutionQ1();
 
-  answerQ1.style.display = "block";
-  answerQ1.style.color = "darkcyan";
-  answerQ1.style.fontSize = "15px";
-  answerQ1.innerHTML = solQ1;
+  solutionQ1()
+
+  // let solQ1 = solutionQ1();
+
+  // answerQ1.style.display = "block";
+  // answerQ1.style.color = "darkcyan";
+  // answerQ1.style.fontSize = "15px";
+  // answerQ1.innerHTML = solQ1;
 }
 
 
@@ -69,12 +72,14 @@ function solutionQ2(){
 
 btnQ2.onclick = function(){
   
-  let solQ2 = solutionQ2();
+  solutionQ2()
 
-  answerQ2.style.display = "block";
-  answerQ2.style.color = "darkcyan";
-  answerQ2.style.fontSize = "15px";
-  answerQ2.innerHTML = solQ2;
+  // let solQ2 = solutionQ2();
+
+  // answerQ2.style.display = "block";
+  // answerQ2.style.color = "darkcyan";
+  // answerQ2.style.fontSize = "15px";
+  // answerQ2.innerHTML = solQ2;
 }
 
 
@@ -116,12 +121,14 @@ function solutionQ3(){
 
 btnQ3.onclick = function(){
   
-  let solQ3 = solutionQ3();
+  solutionQ3()
 
-  answerQ3.style.display = "block";
-  answerQ3.style.color = "darkcyan";
-  answerQ3.style.fontSize = "15px";
-  answerQ3.innerHTML = solQ3;
+  // let solQ3 = solutionQ3();
+
+  // answerQ3.style.display = "block";
+  // answerQ3.style.color = "darkcyan";
+  // answerQ3.style.fontSize = "15px";
+  // answerQ3.innerHTML = solQ3;
 }
 
 //Q4
@@ -146,13 +153,15 @@ function solutionQ4(){
 
 
 btnQ4.onclick = function(){
-  
-  let solQ4 = solutionQ4();
 
-  answerQ4.style.display = "block";
-  answerQ4.style.color = "darkcyan";
-  answerQ4.style.fontSize = "15px";
-  answerQ4.innerHTML = solQ4;
+  solutionQ4()
+  
+  // let solQ4 = solutionQ4();
+
+  // answerQ4.style.display = "block";
+  // answerQ4.style.color = "darkcyan";
+  // answerQ4.style.fontSize = "15px";
+  // answerQ4.innerHTML = solQ4;
 }
 
 
@@ -177,13 +186,15 @@ function solutionQ5(){
 }
 
 btnQ5.onclick = function(){
-  
-  let solQ5 = solutionQ5();
 
-  answerQ5.style.display = "block";
-  answerQ5.style.color = "darkcyan";
-  answerQ5.style.fontSize = "15px";
-  answerQ5.innerHTML = solQ5;
+  solutionQ5()
+  
+  // let solQ5 = solutionQ5();
+
+  // answerQ5.style.display = "block";
+  // answerQ5.style.color = "darkcyan";
+  // answerQ5.style.fontSize = "15px";
+  // answerQ5.innerHTML = solQ5;
 }
 
 //Q6
@@ -203,13 +214,15 @@ function solutionQ6(){
 }
 
 btnQ6.onclick = function(){
-  
-  let solQ6 = solutionQ6();
 
-  answerQ6.style.display = "block";
-  answerQ6.style.color = "darkcyan";
-  answerQ6.style.fontSize = "15px";
-  answerQ6.innerHTML = solQ6;
+  solutionQ6()
+  
+  // let solQ6 = solutionQ6();
+
+  // answerQ6.style.display = "block";
+  // answerQ6.style.color = "darkcyan";
+  // answerQ6.style.fontSize = "15px";
+  // answerQ6.innerHTML = solQ6;
 }
 
 //Q7
@@ -226,6 +239,9 @@ function solutionQ7(){
     console.log ("The Ticket price for you is 5 rupees.")
 
   }
+  else if (inpQ7 < 0 || inpQ7 == ""){
+    console.log ("Please put some value first");
+  }
   else if (inpQ7 >= 12 && inpQ7 < 18 ){
     console.log ("The Ticket price for you is 10 rupees.")
   }
@@ -239,13 +255,15 @@ function solutionQ7(){
 }
 
 btnQ7.onclick = function(){
-  
-  let solQ7 = solutionQ7();
 
-  answerQ7.style.display = "block";
-  answerQ7.style.color = "darkcyan";
-  answerQ7.style.fontSize = "15px";
-  answerQ7.innerHTML = solQ7;
+  solutionQ7()
+  
+  // let solQ7 = solutionQ7();
+
+  // answerQ7.style.display = "block";
+  // answerQ7.style.color = "darkcyan";
+  // answerQ7.style.fontSize = "15px";
+  // answerQ7.innerHTML = solQ7;
 }
 
 //Q8
@@ -266,7 +284,9 @@ function solutionQ8(){
   else if (inpQ8 >= 50 && inpQ8 < 100 ){
     console.log ("The Purchase amount for you after discount is " + (inpQ8 -10));
   }
-  
+  else if (inpQ8 < 0 || inpQ8 == ""){
+    console.log ("Please put some value first");
+  }
   else {
     console.log ("Sorry but you got no discount and the amount is " + inpQ8)
   }
@@ -274,13 +294,15 @@ function solutionQ8(){
 }
 
 btnQ8.onclick = function(){
-  
-  let solQ8 = solutionQ8();
 
-  answerQ8.style.display = "block";
-  answerQ8.style.color = "darkcyan";
-  answerQ8.style.fontSize = "15px";
-  answerQ8.innerHTML = solQ8;
+  solutionQ8();
+  
+  // let solQ8 = solutionQ8();
+
+  // answerQ8.style.display = "block";
+  // answerQ8.style.color = "darkcyan";
+  // answerQ8.style.fontSize = "15px";
+  // answerQ8.innerHTML = solQ8;
 }
 
 //Q9
@@ -318,13 +340,15 @@ function solutionQ9(){
 }
 
 btnQ9.onclick = function(){
-  
-  let solQ9 = solutionQ9();
 
-  answerQ9.style.display = "block";
-  answerQ9.style.color = "darkcyan";
-  answerQ9.style.fontSize = "15px";
-  answerQ9.innerHTML = solQ9;
+  solutionQ9();
+  
+  // let solQ9 = solutionQ9();
+
+  // answerQ9.style.display = "block";
+  // answerQ9.style.color = "darkcyan";
+  // answerQ9.style.fontSize = "15px";
+  // answerQ9.innerHTML = solQ9;
 }
 
 
@@ -348,13 +372,15 @@ function solutionQ10(){
 }
 
 btnQ10.onclick = function(){
-  
-  let solQ10 = solutionQ10();
 
-  answerQ10.style.display = "block";
-  answerQ10.style.color = "darkcyan";
-  answerQ10.style.fontSize = "15px";
-  answerQ10.innerHTML = solQ10;
+  solutionQ10();
+
+  // let solQ10 = solutionQ10();
+
+  // answerQ10.style.display = "block";
+  // answerQ10.style.color = "darkcyan";
+  // answerQ10.style.fontSize = "15px";
+  // answerQ10.innerHTML = solQ10;
 }
 
 //Q11
@@ -385,10 +411,12 @@ btnQ11.onclick = function(){
   let inpQ11 = parseInt(inputQ11.value);
   let solQ11 = solutionQ11(inpQ11);
 
-  answerQ11.style.display = "block";
-  answerQ11.style.color = "darkcyan";
-  answerQ11.style.fontSize = "15px";
-  answerQ11.innerHTML = solQ11;
+  solQ11;
+
+  // answerQ11.style.display = "block";
+  // answerQ11.style.color = "darkcyan";
+  // answerQ11.style.fontSize = "15px";
+  // answerQ11.innerHTML = solQ11;
 }
 
 

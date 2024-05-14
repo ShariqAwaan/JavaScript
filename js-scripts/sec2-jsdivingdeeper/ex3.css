@@ -45,9 +45,24 @@
   height: 15px;
 }
 
-#btnQ3{
+/* #btnQ3{
   background-color: rgb(157, 90, 36);
   border-radius: 15px;
   border: 2px solid rgb(94, 78, 38);
   color: white;
+} */
+
+
+/* Q3 */
+
+#div4{
+  min-height: 100px;
+  background-color: bisque;
+  border: 2px solid rgb(241, 149, 96);
+}
+#table {
+  margin: 15px;
+  padding: 20px;
+  border: 2px solid black;
+  border-collapse: collapse;
 }

@@ -29,31 +29,20 @@ btnQ1.onclick = function(){
 //Q2
 // 2) Print in the list below the years when the World Cup of Soccer will happen from 2022 to 2050. Remember that the World Cup happens every 4 years.
 
-// let list = document.getElementById("list");
-// let listinside = document.getElementsByClassName("li");
+//  let list = document.getElementById("list");
+        
+//  let listItems = list.querySelectorAll("li");
+ 
+//  let index = 0;
+ 
+//  for (let year = 2022; year <= 2050; year += 4) {
+//      listItems[index].textContent += " " + year;
+//           index++;
+//  }
 
-// // console.log(listinside[0].innerHTML);
-
-
-
-
-
-  
-  
-  
-
-//   for(let i = 0 ; i < listinside.length ; i++){
-   
     
-//     for (let years = 2022 ; years <= 2050 ; years += 4){
-//       let years = listinside[i];
-//       console.log((listinside[i]).innerHTML = years[i] );
-//     }
-//    }
-    
-  
 
-  // console.log ("The world cup will be held in " + years )
+
 
 
 
@@ -124,6 +113,104 @@ btnQ3.onclick = function(){
 
 
 //Q4
+// Fill the html table below with the sales and print the total amount of sales in the last line. Don't include the sales that had a refund requested.
+
+var sales = [
+
+  {
+      'student': 'Jason Gomes',
+      'date': '10/06/2018',
+      'amount': 34.99,
+      'refundRequested': null
+      
+  },
+
+  {
+      'student': 'Carlos Blue',
+      'date': '10/06/2018',
+      'amount': 29.99,
+      'refundRequested': null
+      
+  },
+
+  {
+      'student': 'Martin Heyes',
+      'date': '11/06/2018',
+      'amount': 39.99,
+      'refundRequested': '13/06/2018'
+      
+  },
+
+  {
+      'student': 'Isabella Hopkins',
+      'date': '11/06/2018',
+      'amount': 29.99,
+      'refundRequested': null
+      
+  },
+
+  {
+      'student': 'Andrew Walt',
+      'date': '12/06/2018',
+      'amount': 34.99,
+      'refundRequested': null
+      
+  }
+
+];
+
+// let info_title = document.getElementById("infoTitle");
+// let section1 = document.getElementById("section1");
+// let section2 = document.getElementById("section2");
+// let section3 = document.getElementById("section3");
+// let section4 = document.getElementById("section4");
+// let total_sales = document.getElementById("totalSales")
+
+
+// for (let i = 0 ; i<sales.length ; i++){
+//   let names = sales[i].student;
+//   let dates = sales[i].date;
+//   let amounts = sales[i].amount;
+//   let refundRequests = sales[i].refundRequested;
+
+
+//    for (let j = 0 ; j < names.length ; j++ ){
+//     let name = names[j][0] ;
+//     let date = dates[j][1] ;
+//     let amount = amounts[j][2];
+//     let refundRequest = refundRequests[j];
+//     section1.innerHTML += name ; 
+//     section2.innerHTML += date ;
+//     section3.innerHTML += amount;
+//     section4.innerHTML += refundRequest;
+//    }
+// }
+
+
+//Q5
+// Suppose our page receives two pieces of information about a person, her age and membership status (member / not a member). Then we need to show the price of a product based on the following rules:
+
+// Members: Free
+// Non-members under 18 years old: $ 6.00
+// Non-members above 18 years old: $ 12.00
+// All people above 65 years old: Free
+
+var isMember = false;
+    var age = 12;
+    
+    if (isMember == true || age >= 65) {
+        console.log('The ticket for you is Free');
+    }
+    else if (age < 18) {
+            console.log('The ticket price for you is $ 6.00');
+        }
+         else {
+            console.log('The ticket price for you is $ 12.00');
+        }
+    
+      
+
+
 
 
 

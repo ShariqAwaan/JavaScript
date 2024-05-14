@@ -205,7 +205,10 @@ let answerQ6 = document.getElementById("pq6");
 
 function solutionQ6(){
   let inpQ6 = inputQ6.value;
-  if (inpQ6 > 0 ){
+  if (inpQ6 == 0 ){
+    console.log("0 is neutral");
+  }
+  else if (inpQ6 > 0 ){
     console.log ("The given no. is a positive integer.");
   }
   else {
@@ -235,11 +238,11 @@ let answerQ7 = document.getElementById("pq7");
 function solutionQ7(){
   let inpQ7 = inputQ7.value;
   
-  if (inpQ7 < 12){
+  if (inpQ7 < 12 && inpQ7 > 0){
     console.log ("The Ticket price for you is 5 rupees.")
 
   }
-  else if (inpQ7 < 0 || inpQ7 == ""){
+  else if (inpQ7 <= 0 || inpQ7 == ""){
     console.log ("Please put some value first");
   }
   else if (inpQ7 >= 12 && inpQ7 < 18 ){

@@ -1,29 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-// Write a program that determines whether a given number is positive or negative.
-
-// Write a program that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15.
-
-// Write a program that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0
-
-// Get the sum of two arrays…actually the sum of all their elements.
-// P.S. Each array includes only integer numbers. Output is a number too.
-// let arr_1 = [3, 5, 22, 5,  7,  2,  45, 75, 89, 21, 2]; // --> 276
-// let arr_2 = [9, 2, 42, 55, 71, 22, 4,  5,  90, 25, 26]; // --> 351
-// // Example output: 
-// // 276 + 351 = 627
-
-// Using a for loop output the elements in reverse order
-
-
 //Q1
 // Write a JavaScript for loop that iterates from 0 to 15. For each iteration, it checks if the current number is odd or even, and displays a message on the screen.
 // Sample Output :
@@ -190,16 +165,16 @@ btnQ4.onclick = function(){
 let btnQ5 = document.getElementById("btnq5");
 let answerQ5 = document.getElementById("pq5");
 
+let numbersArray = [1,13,22,123,49];
 function solutionQ5(){
-  let numbersArray = [1,13,22,123,49];
-  for (let i = 0 ; i < numbersArray.length ; i++){
-    numbersArray += i
-  }
-  // let answer = numbersArray[0] + numbersArray[1] + numbersArray[2] + numbersArray[3] + numbersArray[4];
+  let result = 0;
+  for (let i = 0; i<numbersArray.length ; i++ ){
+    let sum = numbersArray[i]
+    result += sum;
 
-  console.log (numbersArray);
+  }
+  console.log (result);
 }
-console.log(solutionQ5())
 
 btnQ5.onclick = function(){
   
@@ -211,7 +186,209 @@ btnQ5.onclick = function(){
   answerQ5.innerHTML = solQ5;
 }
 
+//Q6
+// Write a program that determines whether a given number is positive or negative.
+let inputQ6 = document.getElementById("inputq6")
+let btnQ6 = document.getElementById("btnq6");
+let answerQ6 = document.getElementById("pq6");
+
+function solutionQ6(){
+  let inpQ6 = inputQ6.value;
+  if (inpQ6 > 0 ){
+    console.log ("The given no. is a positive integer.");
+  }
+  else {
+    console.log("The given no. is a negative integer.");
+  }
+}
+
+btnQ6.onclick = function(){
+  
+  let solQ6 = solutionQ6();
+
+  answerQ6.style.display = "block";
+  answerQ6.style.color = "darkcyan";
+  answerQ6.style.fontSize = "15px";
+  answerQ6.innerHTML = solQ6;
+}
+
+//Q7
+// Write a program that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15.
+
+let inputQ7 = document.getElementById("inputq7")
+let btnQ7 = document.getElementById("btnq7");
+let answerQ7 = document.getElementById("pq7");
+
+function solutionQ7(){
+  let inpQ7 = inputQ7.value;
+  
+  if (inpQ7 < 12){
+    console.log ("The Ticket price for you is 5 rupees.")
+
+  }
+  else if (inpQ7 >= 12 && inpQ7 < 18 ){
+    console.log ("The Ticket price for you is 10 rupees.")
+  }
+  else if (inpQ7 >= 18 && inpQ7 < 60 ){
+    console.log ("The Ticket price for you is 20 rupees.")
+  }
+  else {
+    console.log ("The Ticket price for you is 15 rupees.")
+  }
+
+}
+
+btnQ7.onclick = function(){
+  
+  let solQ7 = solutionQ7();
+
+  answerQ7.style.display = "block";
+  answerQ7.style.color = "darkcyan";
+  answerQ7.style.fontSize = "15px";
+  answerQ7.innerHTML = solQ7;
+}
+
+//Q8
+// Write a program that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0
+
+let inputQ8 = document.getElementById("inputq8")
+let btnQ8 = document.getElementById("btnq8");
+let answerQ8 = document.getElementById("pq8");
 
 
+function solutionQ8(){
+  let inpQ8 = inputQ8.value;
+  
+  if (inpQ8 >= 100){
+    console.log ("The Purchase amount for you after discount is " + (inpQ8 -20));
+
+  }
+  else if (inpQ8 >= 50 && inpQ8 < 100 ){
+    console.log ("The Purchase amount for you after discount is " + (inpQ8 -10));
+  }
+  
+  else {
+    console.log ("Sorry but you got no discount and the amount is " + inpQ8)
+  }
+
+}
+
+btnQ8.onclick = function(){
+  
+  let solQ8 = solutionQ8();
+
+  answerQ8.style.display = "block";
+  answerQ8.style.color = "darkcyan";
+  answerQ8.style.fontSize = "15px";
+  answerQ8.innerHTML = solQ8;
+}
+
+//Q9
+// Get the sum of two arrays…actually the sum of all their elements.
+// P.S. Each array includes only integer numbers. Output is a number too.
+// let arr_1 = [3, 5, 22, 5,  7,  2,  45, 75, 89, 21, 2]; // --> 276
+// let arr_2 = [9, 2, 42, 55, 71, 22, 4,  5,  90, 25, 26]; // --> 351
+// // Example output: 
+// // 276 + 351 = 627
+
+
+// let inputQ9 = document.getElementById("inputq9-3")
+let btnQ9 = document.getElementById("btnq9");
+let answerQ9 = document.getElementById("pq9");
+
+let arr_1 = [3, 5, 22, 5,  7,  2,  45, 75, 89, 21, 2];
+let arr_2 = [9, 2, 42, 55, 71, 22, 4,  5,  90, 25, 26];
+
+function solutionQ9(){
+  let result1 = 0;
+  let result2 = 0;
+  for (let i = 0 ; i < arr_1.length ; i++){
+    let sumOf1stArray = arr_1[i];
+    result1 += sumOf1stArray;
+  }
+  // console.log (result1);
+
+  for (let i = 0 ; i < arr_2.length ; i++){
+    let sumOf2ndArray = arr_2[i];
+    result2 += sumOf2ndArray;
+  }
+  // console.log(result2)
+  let finalResult = result1 + result2 ;
+  console.log(finalResult);
+}
+
+btnQ9.onclick = function(){
+  
+  let solQ9 = solutionQ9();
+
+  answerQ9.style.display = "block";
+  answerQ9.style.color = "darkcyan";
+  answerQ9.style.fontSize = "15px";
+  answerQ9.innerHTML = solQ9;
+}
+
+
+//Q10
+// Using a for loop output the elements in reverse order
+// let arr = [43, "what", 9, true, "cannot", false, "be", 3, true];
+// // Example output: 
+// // true 3  be  false cannot  true 9 what 43 OR each item on a new line
+
+let btnQ10 = document.getElementById("btnq10");
+let answerQ10 = document.getElementById("pq10");
+
+let arr = [43, "what", 9, true, "cannot", false, "be", 3, true];
+
+function solutionQ10(){
+  for (let i = 0 ; i< arr.length ; i++){
+    let solvedArr = arr.reverse();
+
+    console.log (solvedArr[i]);
+  }
+}
+
+btnQ10.onclick = function(){
+  
+  let solQ10 = solutionQ10();
+
+  answerQ10.style.display = "block";
+  answerQ10.style.color = "darkcyan";
+  answerQ10.style.fontSize = "15px";
+  answerQ10.innerHTML = solQ10;
+}
+
+//Q11
+// Given a number n Calculate the factorial of the number
+
+let inputQ11 = document.getElementById("inputq11-2");
+let btnQ11 = document.getElementById("btnq11");
+let answerQ11 = document.getElementById("pq11");
+
+function solutionQ11(n){
+  // let factorial = 1
+  let result = 1;
+  for (let i = n ; i >= 1 ; i--){
+    
+    // factorial = factorial * i;
+    result *= i ;
+    
+  }
+  //  console.log (factorial);
+  console.log (result);
+  // console.log (typeof(result));
+  // console.log (typeof(factorial));
+}
+// console.log (solutionQ11(7));
+
+
+btnQ11.onclick = function(){
+  let inpQ11 = parseInt(inputQ11.value);
+  let solQ11 = solutionQ11(inpQ11);
+
+  answerQ11.style.display = "block";
+  answerQ11.style.color = "darkcyan";
+  answerQ11.style.fontSize = "15px";
+  answerQ11.innerHTML = solQ11;
+}
 
 

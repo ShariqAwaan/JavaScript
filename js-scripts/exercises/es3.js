@@ -423,3 +423,155 @@ btnQ11.onclick = function(){
 }
 
 
+
+//Assignment 
+
+let students = [
+  {
+    "name" : "Iqbal Gill" ,
+    "english" : 40 ,
+    "urdu" : 60 ,
+    "pakStudies" : 45 ,
+    "math" : 60 ,
+    "physics" : 55 ,
+    "chemistry" : 59 ,
+    "totalMarks" : 520 ,
+    "grade" : ((40 + 60 + 45 + 60 + 55 + 59 )/520)*100,
+  },
+
+  {
+    "name" : "Tom Cruise" ,
+    "english" : 70 ,
+    "urdu" : 65 ,
+    "pakStudies" : 49 ,
+    "math" : 55 ,
+    "physics" : 59 ,
+    "chemistry" : 71 ,
+    "totalMarks" : 520 ,
+     "grade" : ((70 + 65 + 49 + 55 + 59 + 71)/520)*100,
+  },
+
+  {
+    "name" : "Dave Gray" ,
+    "english" : 95 ,
+    "urdu" : 95 ,
+    "pakStudies" : 39 ,
+    "math" : 77 ,
+    "physics" : 68 ,
+    "chemistry" : 61 ,
+    "totalMarks" : 520 ,
+    "grade" : ((95 + 95 + 39 + 77 + 68 + 61)/520)*100,
+  },
+
+  {
+    "name" : "Harry" ,
+    "english" : 94 ,
+    "urdu" : 91 ,
+    "pakStudies" : 41 ,
+    "math" : 84 ,
+    "physics" : 81 ,
+    "chemistry" : 80 ,
+    "totalMarks" : 520 ,
+    "grade" : ((94 + 91 + 41 + 84 + 81 + 80)/520)*100,
+  },
+
+  {
+    "name" : "Jack Daniel" ,
+    "english" : 90 ,
+    "urdu" : 78 ,
+    "pakStudies" : 42 ,
+    "math" : 90 ,
+    "physics" : 61 ,
+    "chemistry" : 41 ,
+    "totalMarks" : 520 ,
+    "grade" : ((90 + 78 + 42 + 90 + 61 + 41)/520)*100,
+  }
+
+]  
+
+// let grades = 0;
+function statusOfGrade(){
+  for (let a=0; a<students.length; a++){
+    let grades = students[a].grade;
+    if (grades >= 90){
+      (students[a].grade = "A+") ;
+    }
+    else if ( grades >=80 && grades <90){
+      (students[a].grade = "A") ;
+    }
+    else if (grades >=70 && grades <80){
+      (students[a].grade = "B")
+    }
+    else if (grades >=60 && grades <70){
+       (students[a].grade = "C")
+    }
+    else if (grades >=50 && grades <60){
+       (students[a].grade = "D")
+    }
+    else {
+       ("Fail")
+    }
+
+  }
+
+}
+statusOfGrade();
+
+let mainSection = document.getElementById("t_body");
+
+let t__body = [];
+let obtainedMarks = 0;
+let percentage = 0;
+
+
+for (let i =0; i<students.length; i++){
+  obtainedMarks = (students[i].english + students[i].urdu + students[i].pakStudies + students[i].math + students[i].physics + students[i].chemistry);
+  percentage = ((obtainedMarks/520)*100).toFixed(2);
+
+
+  let tableBody = `<tr>
+  <td>${students[i].name}</td>
+  <td>${students[i].english}</td>
+  <td>${students[i].urdu}</td>
+  <td>${students[i].pakStudies}</td>
+  <td>${students[i].math}</td>
+  <td>${students[i].physics}</td>
+  <td>${students[i].chemistry}</td>
+  <td>${students[i].totalMarks}</td>
+  <td>${obtainedMarks}</td>
+  <td>${students[i].grade}</td>
+  <td>${percentage}%</td>
+  </tr>`
+  
+  
+
+  t__body += tableBody;
+  mainSection.innerHTML = t__body;
+
+  
+}
+
+// let percentage = (((students[i].english + students[i].urdu + students[i].pakStudies + students[i].math + students[i].physics + students[i].chemistry)/520)*100).toFixed(2) ;
+//   if(percentage >= 90){
+//     return (students[i].grades = "A+");
+//   }
+  // else if (percentage >=80 && percentage <90){
+  //   return (students[i].grades = "A")
+  // }
+  // else if (percentage >=70 && percentage <80){
+  //   return (students[i].grades = "B")
+  // }
+  // else if (percentage >=60 && percentage <70){
+  //   return (students[i].grades = "C")
+  // }
+  // else if (percentage >=50 && percentage <60){
+  //   return (students[i].grades = "D")
+  // }
+  // else {
+  //   return ("Fail")
+  // }
+
+
+    
+
+

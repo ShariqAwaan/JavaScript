@@ -322,3 +322,20 @@
   border-radius: 15px;
   border: 2px solid rgb(111, 122, 40);
 }
+
+
+
+/* Assignment */
+
+#divTable{
+  min-height: 100px;
+  background-color: bisque;
+  border: 2px solid rgb(241, 96, 96);
+}
+#table2 {
+  margin: 15px;
+  padding: 20px;
+  border: 2px solid black;
+  color: rgb(111, 15, 30);
+  border-collapse: collapse;
+}

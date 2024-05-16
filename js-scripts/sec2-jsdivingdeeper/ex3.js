@@ -65,16 +65,20 @@ btnQ1.onclick = function(){
     let yearsOfWorldCup = [] ;
 
     for (let years = 2022 ; years <= 2050 ; years++){
+
       if (years % 4 === 2 ){
         yearsOfWorldCup.push(years);
       }
+      // console.log("iteration no. "   + years)
+     
     }
 
     for (let i = 0; i<yearsOfWorldCup.length; i++){
-      if (i < yearsOfWorldCup.length){
+    
       list[i].innerText = yearsOfWorldCup[i];
-      }
+      // console.log("iteration no. "   + i)
     }
+   
 
 
 

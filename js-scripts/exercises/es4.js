@@ -69,23 +69,18 @@ while(k < arr.length){
 //Q4
 // Write a javascript function to find the power of a number using while loop
 
-// let num1 = 3;
-// let num2 = 4;
-// function byForLoop4(num1 , num2){
-//   for (let i = 0 ; i < 1 ; i++ ){
 
-//   }
-// }
 
 let powerOfNumber = 2;
 
 function solutionQ4(a , b){
   let i = 0;
-  while(i<b){
+  while(i<1){
+    // let power = Math.pow(a , b);
     let power = a ** b;
     console.log(power);
     i++
-    break
+    
   }
 }
   

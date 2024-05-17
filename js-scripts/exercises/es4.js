@@ -89,7 +89,7 @@ function solutionQ4(a , b){
 
 
 //Q5
-// Write a avascript function to find the no of digits in a number using while loop.
+// Write a javascript function to find the no of digits in a number using while loop.
 
  
 
@@ -97,13 +97,48 @@ function solutionQ4(a , b){
 
 function solutionQ5(no){
   let number = no.toString();
-  let i = 0;
-  while(i<1){
-    let noOfDigits = number.length;
-   console.log(noOfDigits);
+  let j = 0;
+  while(i<number.length){
+    j++;
+   console.log(j);
    i++
   }
 }
 // solutionQ5();
 
+
+// for (var a = 0; a < 3 ; a++) {
+//   console.log('Parent loop count: ', a);
+
+//   for (var a = 0; a < 3 ; a++) {
+//       console.log('Child loop count: ', a);
+//   }
+// }
+
+
+// for (let a = 0; a < 3 ; a++) {
+//   console.log('Parent loop count: ', a);
+
+//   for (let a = 0; a < 3 ; a++) {
+//       console.log('Child loop count: ', a);
+//   }
+// }
+
+
+// var num = 0;
+    
+    
+// // num++;
+
+// while (num < 20) {
+    
+//     if (num % 2 != 0) {
+//       num++
+//         continue;
+        
+//     }
+
+//     console.log(num);
+//   //  num++
+// }
 

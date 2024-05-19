@@ -61,29 +61,7 @@ var shipments = {
     
         };
 
-//         function updateShipmentInfo() {
-//             // Get the selected shipment type
-//             var shipmentType = document.getElementById("shipmentType").value;
 
-//             // Get the current date
-//             var orderDate = new Date();
-
-//             // Calculate the expected delivery date
-//             var leadTime = shipments[shipmentType].leadTime;
-//             var expectedDate = new Date(orderDate);
-//             expectedDate.setDate(orderDate.getDate() + leadTime);
-
-//             // Retrieve the fee
-//             var fee = shipments[shipmentType].fee;
-
-//             // Update the information in the HTML
-//             document.getElementById("orderDate").textContent = orderDate.toISOString().split('T')[0];
-//             document.getElementById("expectedDate").textContent = expectedDate.toISOString().split('T')[0];
-//             document.getElementById("deliveryFee").textContent = fee.toFixed(2);
-//         }
-
-//         // Run updateShipmentInfo on page load to initialize default values
-//         window.onload = updateShipmentInfo;
 
 
 
@@ -100,62 +78,52 @@ var shipments = {
 
                     
 
-//     var phones = 
-//         {
-//             'iphone_se_red': {
-//                 'name': 'iPhone SE 64GB Red',
-//                 'price': '450',
-//                 'currency': 'US$',
-//                 'imageUrl': "https://www.mhr.pt/232729-large_default/apple-iphone-se-64gb-red.jpg"
-//             },
-//             'iphone_11_black': {
-//                 'name': 'iPhone 11 128GB Black',
-//                 'price': '869',
-//                 'currency': 'EUR',
-//                 'imageUrl': "https://assets.swappie.com/iphon11musta1-300x300.jpg"
-//             },
-//             'iphone_8_plus_silver': {
-//                 'name': 'iPhone 8 Plus 64GB Silver',
-//                 'price': '519',
-//                 'currency': 'US$',
-//                 'imageUrl': "https://www.mhr.pt/196170/apple-iphone-8-plus-64gb-silver.jpg"
-//             }
-//           }
+    var phones = 
+        {
+            'iphone_se_red': {
+                'name': 'iPhone SE 64GB Red',
+                'price': '450',
+                'currency': 'US$',
+                'imageUrl': "iphoneSE.jpg"
+            },
+            'iphone_11_black': {
+                'name': 'iPhone 11 128GB Black',
+                'price': '869',
+                'currency': 'EUR',
+                'imageUrl': "iphone11.jpg"
+            },
+            'iphone_8_plus_silver': {
+                'name': 'iPhone 8 Plus 64GB Silver',
+                'price': '519',
+                'currency': 'US$',
+                'imageUrl': "iphone8plus.jpg"
+            }
+          }
 
 
-// var phones = {
-//   'iphone_se_red': {
-//       'name': 'iPhone SE 64GB Red',
-//       'price': '450',
-//       'currency': 'US$',
-//       'imageUrl': "https://www.mhr.pt/232729-large_default/apple-iphone-se-64gb-red.jpg"
-//   },
-//   'iphone_11_black': {
-//       'name': 'iPhone 11 128GB Black',
-//       'price': '869',
-//       'currency': 'EUR',
-//       'imageUrl': "https://assets.swappie.com/iphon11musta1-300x300.jpg"
-//   },
-//   'iphone_8_plus_silver': {
-//       'name': 'iPhone 8 Plus 64GB Silver',
-//       'price': '519',
-//       'currency': 'US$',
-//       'imageUrl': "https://www.mhr.pt/196170/apple-iphone-8-plus-64gb-silver.jpg"
-//   }
-// };
+        let image = document.getElementById("iphoneImage");
+        let modelName = document.getElementById("iphoneName");
+        let price = document.getElementById("iphonePrice");
+        let options = document.getElementsByName("iphone");
 
-// function updateProductInfo() {
-//   // Get the selected product key
-//   var selectedProductKey = document.getElementById("productSelect").value;
 
-//   // Retrieve the product information from the phones object
-//   var product = phones[selectedProductKey];
-
-//   // Update the HTML elements with the product information
-//   document.getElementById("productName").textContent = product.name;
-//   document.getElementById("productPrice").textContent = product.currency + " " + parseFloat(product.price).toFixed(2);
-//   document.getElementById("productImage").src = product.imageUrl;
-// }
-
-// // Run updateProductInfo on page load to initialize default values
-// window.onload = updateProductInfo;
+    for (let a = 0; a < options.length; a++) {
+    
+    options[a].onchange = function (){
+        if (options[0].checked) {
+            image.src = phones.iphone_se_red.imageUrl;
+            modelName.innerHTML = phones.iphone_se_red.name;
+            price.innerHTML = phones.iphone_se_red.currency + " " + phones.iphone_se_red.price;
+        }
+         else if (options[1].checked) {
+            image.src = phones.iphone_11_black.imageUrl;
+            modelName.innerHTML = phones.iphone_11_black.name;
+            price.innerHTML = phones.iphone_11_black.currency + " " + phones.iphone_11_black.price;
+        }
+         else{
+            image.src = phones.iphone_8_plus_silver.imageUrl;
+            modelName.innerHTML = phones.iphone_8_plus_silver.name;
+            price.innerHTML = phones.iphone_8_plus_silver.currency + " " + phones.iphone_8_plus_silver.price;
+        } 
+    }
+}

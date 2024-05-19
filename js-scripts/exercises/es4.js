@@ -97,10 +97,10 @@ function solutionQ4(a , b){
 
 function solutionQ5(no){
   let number = no.toString();
-  let j = 0;
+  let i = 0;
   while(i<number.length){
-    j++;
-   console.log(j);
+   i++ 
+   console.log(i.length);
    i++
   }
 }
@@ -127,8 +127,6 @@ function solutionQ5(no){
 
 // var num = 0;
     
-    
-// // num++;
 
 // while (num < 20) {
     
@@ -137,8 +135,8 @@ function solutionQ5(no){
 //         continue;
         
 //     }
-
+//        num++
 //     console.log(num);
-//   //  num++
+  
 // }
 

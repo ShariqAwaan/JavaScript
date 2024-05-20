@@ -44,7 +44,7 @@ var shipments = {
             if(selectedOption == 0){
             document.getElementById("orderDate").innerHTML = "";
             document.getElementById("deliveryDate").innerHTML = "";
-            document.getElementById("deliveryFee").innerHTML = shipments.standard.fee;
+            document.getElementById("deliveryFee").innerHTML = "";
             }
             else if(selectedOption == 1){
             document.getElementById("orderDate").innerHTML = finalDate;

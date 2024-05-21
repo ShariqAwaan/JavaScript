@@ -79,11 +79,14 @@ console.log('Solution Q3');
 
 let arr = ['Maths' , 'English' , 'Stats'];
 
-arr.push('Discrete Mathematics')
+
+arr.push('Discrete Mathematics');
 
 console.log(arr);
 
-arr[1]=("Chemistry")
+arr[1]=("Chemistry");
+
+console.log(arr)
 
 arr.shift();
 
@@ -112,11 +115,12 @@ console.log(i)
 
 // while (i==false){
 //   console.log ("I am while loop ");
+//   i++
 // }
 document.getElementById("whileLoop").onclick = function(){
   i=true;
-  console.log(i)
-  console.log("Loop Stopped")
+  console.log(i);
+  // console.log("Loop Stopped")
 }
 
 // console.log(document.getElementById("whileLoop").onclick = function(){
@@ -131,7 +135,7 @@ function nameOfUser(){
   console.log (updatedName)
 }
 
-userName.onchange = function(){
+userName.oninput = function(){
   nameOfUser();
 }
 

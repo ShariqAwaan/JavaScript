@@ -98,13 +98,11 @@ function solutionQ4(a , b){
 function solutionQ5(no){
   let number = no.toString();
   let i = 0;
-  let digits = 0;
   while(i<number.length){
-   digits++
   //  console.log(i.length);
    i++
   }
-  return digits;
+  return i;
 }
 console.log(solutionQ5(12324234334))
 // solutionQ5();

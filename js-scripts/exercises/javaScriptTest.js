@@ -17,7 +17,14 @@ let data = [
 
 ]
 
-document.getElementById("interests").innerText = ("The hobbies of Aliza are " + data[1].hobbies);
+// document.getElementById("interests").innerText = ("The hobbies of Aliza are " + data[1].hobbies);
+
+let forAleeza = data[1].hobbies;
+
+
+for (let i=0; i<forAleeza.length; i++){
+  console.log(forAleeza[i]);
+}
 
 
 //Q2
@@ -100,7 +107,7 @@ arr.unshift("Calculus");
 
 console.log(arr);
 
-let newArray = arr.slice(1,3);
+let newArray = arr.slice(-2,);
 console.log("The Original Array is ");
 console.log(arr);
 console.log("The New Array is ");
@@ -113,12 +120,20 @@ let i=false;
 console.log(i)
 
 
-// while (i==false){
-//   console.log ("I am while loop ");
-//   i++
-// }
+while (i==false){
+     if(i==false){
+  console.log ("I am while loop ");
+     }
+     else{
+      break
+     }
+  i++
+}
 document.getElementById("whileLoop").onclick = function(){
   i=true;
+  if (i==true){
+    
+  }
   console.log(i);
   // console.log("Loop Stopped")
 }
@@ -135,8 +150,9 @@ function nameOfUser(){
   console.log (updatedName)
 }
 
-userName.oninput = function(){
+userName.oninput= function(){
   nameOfUser();
+
 }
 
 

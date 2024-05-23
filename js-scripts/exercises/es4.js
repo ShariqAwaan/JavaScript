@@ -108,36 +108,5 @@ console.log(solutionQ5(12324234334))
 // solutionQ5();
 
 
-// for (var a = 0; a < 3 ; a++) {
-//   console.log('Parent loop count: ', a);
 
-//   for (var a = 0; a < 3 ; a++) {
-//       console.log('Child loop count: ', a);
-//   }
-// }
-
-
-// for (let a = 0; a < 3 ; a++) {
-//   console.log('Parent loop count: ', a);
-
-//   for (let a = 0; a < 3 ; a++) {
-//       console.log('Child loop count: ', a);
-//   }
-// }
-
-
-// var num = 0;
-    
-
-// while (num < 20) {
-    
-//     if (num % 2 != 0) {
-//       num++
-//         continue;
-        
-//     }
-//        num++
-//     console.log(num);
-  
-// }
 

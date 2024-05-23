@@ -127,3 +127,142 @@ var shipments = {
         } 
     }
 }
+
+
+//Q3
+
+// function get_user() {
+//     let user = {
+//         name: "ABC"
+//     }
+//     return user
+// }
+// let receivedUser = get_user()
+// // user obj
+
+
+// function greet_user(user) {
+//      console.log("Hi " + user.name + " How are you?")
+// }
+
+// console.log(greet_user(receivedUser))
+
+//
+
+
+
+// function get_user(callback){
+
+//     window.setTimeout(function(){
+//         var u = {
+//             'name': 'John' ,
+//             "age": 19 ,
+//             "profession": 'web development'            
+//         };
+//         callback(u);
+//     }, 5000);
+
+// }
+        
+// function greet_user(user) {
+//     console.log('Hi I am ' + user.name + ', i am ' + user.age + ' years old and i am a ' + user.profession );
+// }
+        
+// get_user(greet_user);
+
+// setInterval(timer , 1000);
+// function timer(){
+//     let time = new Date();
+//     let hours = time.getHours();
+//     let minutes = time.getMinutes();
+//     let seconds = time.getSeconds();
+//     // document.getElementById("time").innerHTML = new Date().toLocaleTimeString();
+//     document.getElementById("time").innerHTML = (hours + ":" + minutes + ":" + seconds );
+// }
+
+let getSeconds = "00";
+// let getmilliSeconds = getSeconds/1000;
+let getMinutes = "00";
+let getHours = "00";
+
+
+let startButton = document.getElementById("startButton");
+let stopButton = document.getElementById("stopButton");
+let resetButton = document.getElementById("resetButton");
+let times = document.getElementById("time") ;
+
+
+let startTime;
+
+// let timer = setInterval (time , 1000);
+
+
+
+function time(){
+    
+    getSeconds++; 
+    if (getSeconds < 10 ){
+        getSeconds = ("0"+getSeconds);
+        
+        
+    }
+    
+    // getMinutes = ("0"+getMinutes);
+    if(getSeconds >= 60){
+        getSeconds = 0;
+        getMinutes++;
+        if( getMinutes < 10){
+            getMinutes = ("0"+getMinutes);
+        }
+    }
+    
+    
+    if(getMinutes >= 60){
+        getMinutes = 0;
+        getHours++;
+        if(getHours <10){
+            getHours = ("0" + getHours)
+        }
+    }
+
+   let time = (getHours + ":" + getMinutes + ":" + getSeconds );
+   return times.innerHTML = time;
+    
+}
+
+startButton.addEventListener("click" , ()=>{
+    if(!startTime){
+        startTime = setInterval(time , 1000);
+    }
+});
+stopButton.addEventListener("click" , ()=>{
+    if (startTime){
+        startTime = clearInterval(startTime);
+    }
+});
+resetButton.addEventListener("click" , ()=>{
+    clearInterval(startTime);
+    startTime = null;
+    getSeconds = "00";
+    getMinutes = "00";
+    getHours = "00";
+    times.innerHTML = "00:00:00"
+});
+
+// function sum(c,b) {
+//     d = c+b;
+//     console.log(d);
+// }
+
+// let a = setInterval( sum(4,5), 1000)
+// console.log(a);
+
+
+
+
+
+
+
+
+
+

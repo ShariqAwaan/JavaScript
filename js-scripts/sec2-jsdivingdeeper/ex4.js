@@ -131,45 +131,6 @@ var shipments = {
 
 //Q3
 
-// function get_user() {
-//     let user = {
-//         name: "ABC"
-//     }
-//     return user
-// }
-// let receivedUser = get_user()
-// // user obj
-
-
-// function greet_user(user) {
-//      console.log("Hi " + user.name + " How are you?")
-// }
-
-// console.log(greet_user(receivedUser))
-
-//
-
-
-
-// function get_user(callback){
-
-//     window.setTimeout(function(){
-//         var u = {
-//             'name': 'John' ,
-//             "age": 19 ,
-//             "profession": 'web development'            
-//         };
-//         callback(u);
-//     }, 5000);
-
-// }
-        
-// function greet_user(user) {
-//     console.log('Hi I am ' + user.name + ', i am ' + user.age + ' years old and i am a ' + user.profession );
-// }
-        
-// get_user(greet_user);
-
 // setInterval(timer , 1000);
 // function timer(){
 //     let time = new Date();
@@ -179,6 +140,7 @@ var shipments = {
 //     // document.getElementById("time").innerHTML = new Date().toLocaleTimeString();
 //     document.getElementById("time").innerHTML = (hours + ":" + minutes + ":" + seconds );
 // }
+
 
 let getSeconds = "00";
 // let getmilliSeconds = getSeconds/1000;

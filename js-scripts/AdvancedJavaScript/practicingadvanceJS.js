@@ -1,3 +1,83 @@
+//CallBack Functions
+
+
+function get_user() {
+    let user = {
+        name: "ABC"
+    }
+    return user
+}
+let receivedUser = get_user()
+// user obj
+
+
+function greet_user(user) {
+     console.log("Hi " + user.name + " How are you?")
+}
+
+console.log(greet_user(receivedUser))
+
+
+//2
+
+
+// function get_user(callback){
+
+//     window.setTimeout(function(){
+//         var u = {
+//             'name': 'John' ,
+//             "age": 19 ,
+//             "profession": 'web development'            
+//         };
+//         callback(u);
+//     }, 5000);
+
+// }
+        
+// function greet_user(user) {
+//     console.log('Hi I am ' + user.name + ', i am ' + user.age + ' years old and i am a ' + user.profession );
+// }
+        
+// get_user(greet_user);
+
+
+//3
+
+setInterval(timer , 1000);
+function timer(){
+    let time = new Date();
+    let hours = time.getHours();
+    let minutes = time.getMinutes();
+    let seconds = time.getSeconds();
+    // document.getElementById("time").innerHTML = new Date().toLocaleTimeString();
+    document.getElementById("time").innerHTML = (hours + ":" + minutes + ":" + seconds );
+}
+
+//4
+
+let button1 = document.getElementById("Btn1");
+const body = document.getElementsByTagName("body");
+  console.log(body)
+// console.log(button1)
+button1.addEventListener("click",() => {
+  body[0].style.backgroundColor = "grey";
+});
+
+//5
+
+let button2 = document.getElementById("Btn2");
+
+button2.addEventListener("click" , ()=>{
+  document.getElementById("para").style.display = "block"
+}); 
+
+
+
+
+
+
+//Error Handling;
+
 //Task: Write a JavaScript function that takes an array and an index as arguments. The function should return the element at the specified index. If the index is out of bounds, the function should catch the error and return an appropriate error message.
 
 function takingArguments(arr,index){
@@ -89,3 +169,9 @@ let JSONPerson = JSON.stringify(person);
 console.log(JSONPerson);
 let OBJPerson = JSON.parse(JSONPerson);
 console.log(OBJPerson);
+
+
+//Local Storage
+
+
+

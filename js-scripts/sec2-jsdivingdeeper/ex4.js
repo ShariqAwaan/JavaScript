@@ -192,7 +192,7 @@ let resetButton = document.getElementById("resetButton");
 let times = document.getElementById("time") ;
 
 
-let startTime;
+let startTime=undefined;
 
 // let timer = setInterval (time , 1000);
 
@@ -249,13 +249,18 @@ resetButton.addEventListener("click" , ()=>{
     times.innerHTML = "00:00:00"
 });
 
-// function sum(c,b) {
-//     d = c+b;
-//     console.log(d);
-// }
 
-// let a = setInterval( sum(4,5), 1000)
-// console.log(a);
+
+
+
+//If a product is ordered on March 26, 2020 and delivered on April, 02, 2020, how many days does it take to be delivered?
+
+let orderDate = new Date("2020-03-26");
+let deliveryDate = new Date("2020-04-02");
+
+let totalTime = deliveryDate-orderDate;
+let totalDeliveryTimeInDates = totalTime/(24*60*60*1000);
+document.getElementById("deliveryTime").innerHTML += ("It took " + totalDeliveryTimeInDates + " days to deliver the parsel.");
 
 
 

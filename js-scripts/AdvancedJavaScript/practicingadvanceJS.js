@@ -173,5 +173,18 @@ console.log(OBJPerson);
 
 //Local Storage
 
+localStorage.setItem("name" , "UnderTaker");
+localStorage.setItem("age" , "50");
+localStorage.setItem("profession" , "Pro Wrestling");
+
+console.log(localStorage.name);
+
+let age = localStorage.getItem("age")
+console.log(age);
+
+console.log(localStorage.length);
+console.log(localStorage.key([2]));
+
+
 
 

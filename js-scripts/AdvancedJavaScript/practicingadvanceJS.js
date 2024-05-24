@@ -19,17 +19,7 @@ function takingArguments(arr,index){
 
 console.log(takingArguments([1,2,3,4,5,6,7] , 8));
 
-// try{
-//   // index <= arr.length-1;
-//   // console.log(arr[index]);
-//   let a = 10/0;
-//   console.log(a);
-// }
-// catch(err){
-//   // index > arr.length-1 ;
-//   console.log(err)
-//   console.log("The index is not found i.e. out of bound")
-// }
+
 
 
 // try {
@@ -41,32 +31,53 @@ console.log(takingArguments([1,2,3,4,5,6,7] , 8));
 // }
 
 
-//Task: Create a custom error class InvalidAgeError. Write a function that takes a person's age as input and throws this custom error if the age is less than 0 or greater than 120. Use a try-catch block to catch the error and return an appropriate message.
+// //Task: Create a custom error class InvalidAgeError. Write a function that takes a person's age as input and throws this custom error if the age is less than 0 or greater than 120. Use a try-catch block to catch the error and return an appropriate message.
 
-class InvalidAgeError extends Error{
-  constructor (message){
-    super(message);
-    this.message = message;
+// class InvalidAgeError extends Error{
+//   constructor (message){
+//     super(message);
+//     this.message = message;
 
+//   }
+// }
+
+// function ageChecker(age){
+//   try {
+//     if(age<=0 || age>120){
+//       throw new InvalidAgeError("Please enter a valid age between 0 and 121")
+//     }
+//     if(age>0 || age<=120){
+//       return "You are alive!"
+//     }
+//   } catch (error) {
+//     return error.message;
+//   }
+// }
+
+// console.log(ageChecker(0));
+
+
+function onDivide(num1 , num2){
+  try{
+    if (num2 == 0 ){
+      throw new Error("2nd no. is 0 so the answer is infinity")
+    }
+    let solution = num1/num2;
+    return solution;
+  }
+  catch (err){
+    return err.message;
   }
 }
 
-function ageChecker(age){
-  try {
-    if(age<=0 || age>120){
-      throw new InvalidAgeError("Please enter a valid age between 0 and 121")
-    }
-    if(age>0 || age<=120){
-      return "You are alive!"
-    }
-  } catch (error) {
-    return error.message;
-  }
-}
+console.log(onDivide(6 , 0));
 
-console.log(ageChecker(0));
 
-//JSON
+
+
+//JSON;
+
+
 
 const person = {
   "name": "John Doe",

@@ -82,22 +82,29 @@ button2.addEventListener("click" , ()=>{
 
 function takingArguments(arr,index){
   try{
-    index <= arr.length-1;
-     (arr[index]);
+    
+     
 
     if (index < 0 || index > arr.length-1 ){
-      throw new Error("The index is not found i.e. out of bound");
+      throw "The index is not found i.e. out of bound";
+    }
+    if(index <= arr.length-1){
+     return (arr[index]);
     }
   
   }
   catch(err){
   
-    return (err.message);
+    return ("error",err.message);
     // console.log()
   }
 }
+// let i=3;
+// console.log(  "the answer is : ",  i <= 5);
 
-console.log(takingArguments([1,2,3,4,5,6,7] , 8));
+console.log(takingArguments([1,2,3,4,5,6,7] , 5));
+
+//make an input in which user add value bw 5 and 10 if not in between throw an error using try catch ;
 
 
 
@@ -140,7 +147,7 @@ console.log(takingArguments([1,2,3,4,5,6,7] , 8));
 function onDivide(num1 , num2){
   try{
     if (num2 == 0 ){
-      throw new Error("2nd no. is 0 so the answer is infinity")
+      throw ("2nd no. is 0 so the answer is infinity")
     }
     let solution = num1/num2;
     return solution;
@@ -160,11 +167,11 @@ console.log(onDivide(6 , 0));
 
 
 const person = {
-  "name": "John Doe",
+  'name': 'John Doe',
   "age": 30,
   "isEmployed": true
 };
-console.log(person);
+console.log(typeof person);
 let JSONPerson = JSON.stringify(person);
 console.log(JSONPerson);
 let OBJPerson = JSON.parse(JSONPerson);
@@ -184,6 +191,7 @@ console.log(age);
 
 console.log(localStorage.length);
 console.log(localStorage.key([2]));
+
 
 
 

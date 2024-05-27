@@ -87,7 +87,7 @@ let medianed = q6Array.map((item)=>{
   // console.log(forEven);
 
   function medianFunction(){
-    if(medianed.length%2==0){
+    if(sortedArray.length%2==0){
       return ("Median for even no. is : " + forEven);
     }
     else{
@@ -176,22 +176,22 @@ return item
 });
 
 
-function red() {
-  if (checkingRed.includes("red")) {
-    return "red";
-  } else {
-    return "There is no red color";
-  }
-}
+// function red() {
+//   if (checkingRed.includes("red")) {
+//     return "red";
+//   } else {
+//     return "There is no red color";
+//   }
+// }
 
-console.log(red());
+// console.log(red());
 
 
-// let filteredColors = checkingRed.filter((item)=>{
-//   return item == "red"
-// });
+let filteredColors = checkingRed.filter((item)=>{
+  return item == "red"
+});
 
-// console.log(filteredColors);
+console.log(filteredColors);
 
 
 
@@ -245,11 +245,12 @@ let itrArray = arary.map((item)=>{
   return item;
 });
 
+answer.innerHTML = itrArray;
 
-button.addEventListener("click" , ()=>{
+input.addEventListener("input" , ()=>{
   let inputt = input.value;
   let filteredArray = itrArray.filter((item)=>{
-    return inputt == item;
+    return item.includes(inputt.toLowerCase());
   })
   return answer.innerHTML = filteredArray;
 });
